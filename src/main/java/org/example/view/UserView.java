@@ -15,7 +15,7 @@ public class UserView {
     }
 
     public void menuUser() {
-        System.out.println("\t\t\tVocê deseja: \n\t[1] Fazer Login" + "\n\t[2] Cadastrar-se" + "\n\t[0] Sair");
+        System.out.println("Você deseja: \n1- Fazer Login" + "\n2- Cadastrar-se" + "\n0- Sair");
         int userChoice = scan.nextInt();
         switch (userChoice) {
             case 1:

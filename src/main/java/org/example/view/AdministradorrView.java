@@ -26,7 +26,7 @@ public class AdministradorrView {
     public void menuAdministrator(boolean longinIsTrue) {
         int choice;
         do {
-            System.out.println("Informe a opção desejada:" + "\n\t1- Cadastrar Autor" + "\n\t2- Cadastrar Livro" + "\n\t3- Deletar um cadastro " + "\n\t4- Efetuar um empréstimo" + "\n\t5- Associar Livro a um Autor" + "\n\t6- Associar Autor a um Livro" + "\n\t0- ");
+            System.out.println("Informe a opção desejada:" + "\n\t1- Cadastrar Autor" + "\n\t2- Cadastrar Livro" + "\n\t3- Deletar um cadastro " + "\n\t4- Efetuar um empréstimo" + "\n\t5- Associar Livro a um Autor" + "\n\t6- Associar Autor a um Livro" + "\n\t0-Sair do programa ");
             choice = scanner.nextInt();
             switch (choice) {
                 case 1:
@@ -70,6 +70,7 @@ public class AdministradorrView {
         String titulo = scanner.next();
         System.out.println("Qual a descrição?: ");
         String descricao = scanner.next();
+        scanner.nextLine();
         System.out.println("Qual o gênero?: ");
         String genero = scanner.next();
         admnistratorController.registerBook(titulo, descricao, genero);

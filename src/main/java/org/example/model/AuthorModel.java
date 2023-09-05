@@ -11,8 +11,8 @@ public class AuthorModel {
         return id_autor;
     }
 
-    public void setId_autor(int id_autror) {
-        this.id_autor = id_autror;
+    public void setId_autor(int id_autor) {
+        this.id_autor = id_autor;
     }
 
     public String getName() {

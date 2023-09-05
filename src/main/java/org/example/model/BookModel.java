@@ -6,7 +6,7 @@ public class BookModel {
     private String description;
     private String genre;
     private boolean status;
-    private int id_author;
+    private int id_autor;
 
     public int getId_book() {
         return id_livro;
@@ -48,11 +48,11 @@ public class BookModel {
         this.status = status;
     }
 
-    public int getId_author() {
-        return id_author;
+    public int getId_autor() {
+        return id_autor;
     }
 
-    public void setId_author(int id_author) {
-        this.id_author = id_author;
+    public void setId_autor(int id_autor) {
+        this.id_autor = id_autor;
     }
 }

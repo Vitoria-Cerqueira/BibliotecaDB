@@ -30,7 +30,7 @@ public class LoanRepository {
     }
 
     public boolean efetuarEmprestimo(int id_book, int id_user) {
-        String sql_emprestimo = "INSERT INTO emprestimo(id_livro,id_leitor,status) VALUES(?,?,?)";
+        String sql_emprestimo = "INSERT INTO emprestimo(idlivro,id_leitor,status) VALUES(?,?,?)";
         try {
             PreparedStatement prepared_emprestimo = conn.prepareStatement(sql_emprestimo);
             prepared_emprestimo.setInt(1, id_book);

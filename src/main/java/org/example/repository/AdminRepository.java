@@ -65,7 +65,7 @@ public class AdminRepository {
     }
 
     public boolean deleteBook(int idBook) {
-        String SQL = "DELETE FROM tbLivros WHERE id_Livro = ?";
+        String SQL = "DELETE FROM livro WHERE id_livro = ?";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, idBook);
@@ -79,7 +79,7 @@ public class AdminRepository {
     }
 
     public boolean deleteAuthor(int idAuthor) {
-        String SQL = "DELETE FROM tbAutor WHERE id_Autor = ?";
+        String SQL = "DELETE FROM autor WHERE id_autor = ?";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, idAuthor);
@@ -93,7 +93,7 @@ public class AdminRepository {
     }
 
     public boolean deleteUser(int idUser) {
-        String SQL = "DELETE FROM tbLeitor WHERE id_Leitor = ?";
+        String SQL = "DELETE FROM leitor WHERE id_leitor = ?";
         try {
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setInt(1, idUser);
@@ -109,7 +109,7 @@ public class AdminRepository {
 
     public boolean associateAuthorId(int idAuthor, int idBook) {
         try {
-            String SQL = "UPDATE livro SET id_Autor=? WHERE id_livro=?";
+            String SQL = "UPDATE livro SET id_autor=? WHERE id_livro=?";
             preparedStatement = conn.prepareStatement(SQL);
             preparedStatement.setInt(1, idAuthor);
             preparedStatement.setInt(2, idBook);
@@ -123,7 +123,7 @@ public class AdminRepository {
 
     public boolean associateBookId(int id_livro, int id_Autor) {
         try {
-            String SQL = "UPDATE autor SET id_livro=? WHERE id_Autor=?";
+            String SQL = "UPDATE autor SET id_livro=? WHERE id_autor=?";
             preparedStatement = conn.prepareStatement(SQL);
             preparedStatement.setInt(1, id_livro);
             preparedStatement.setInt(2, id_Autor);

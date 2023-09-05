@@ -50,9 +50,9 @@ public class AdminController {
     }
 
     public boolean associateAuthorId(int idAuthor, int idBook) {
-        bookModel.setId_author(idAuthor);
+        bookModel.setId_autor(idAuthor);
         bookModel.setId_book(idBook);
-        return adminRepository.associateAuthorId(bookModel.getId_author(), bookModel.getId_book());
+        return adminRepository.associateAuthorId(bookModel.getId_autor(), bookModel.getId_book());
     }
 
     public boolean associateBookId(int idBook, int idAuthor) {
